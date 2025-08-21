@@ -1,13 +1,16 @@
 # Fun-Scripts
 
-## How to use
+## Folder explorer
+Created because i wanted to use terminal as a full text editor and was missing a file explorer for current project
+
+### How to use
 
 Just navigate throw your command line into the folder you want to use this script, than run:
 ```bash
 python folder_explorer.py
 ```
 
-## Commands
+### Commands
 arrow keys UP and DOWN: for moving... up... and... down
 
 Page UP and DOWN: Go to the last item within the same depth in the current folder (has a bug for now tha it's not only within the same folder)
