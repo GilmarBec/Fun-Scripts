@@ -17,4 +17,4 @@ arrow key LEFT: Collapse folder (collapse all folders within the same depth or b
 
 q or Esc: Exit (for some reason esc has a greater delay :P)
 
-(Video of folder explorer use example)[https://www.loom.com/share/e5f1598b08a441e9a051bd65da159daf]
+[Video of folder explorer use example](https://www.loom.com/share/e5f1598b08a441e9a051bd65da159daf)
