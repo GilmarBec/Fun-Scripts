@@ -24,6 +24,7 @@ class DirItem:
 
 
 def is_ignored(filename: str) -> bool:
+    # @TODO sync with .gitignore
     block_list = [".git", "__pycache__", ".idea", ".mypy_cache"]
 
     return filename in block_list
@@ -84,6 +85,7 @@ def main(stdscr):
 
 def render(stdscr, current_list, current_index):
     if current_index is None: current_index = 0
+    # @TODO replace home directory by "~/" to minify folder description (regex or os function)
     stdscr.addstr(f"{os.getcwd()}\n\n")
 
     height, width = stdscr.getmaxyx()
@@ -96,6 +98,8 @@ def render(stdscr, current_list, current_index):
             end = height + current_index
 
     for curr in current_list[start:end]:
+        # @TODO add more ascii caracters for intermediary cases
+        # @TODO add possibility to pass param to see file/folder size
         msg = f"{'  ' * curr.depth + '└──'*int(bool(curr.depth))}{' > ' if current_list[current_index].path == curr.path else ' '}{curr.name}\n"
         stdscr.addstr(msg, curses.color_pair(3 if curr.is_dir else 2))
 
